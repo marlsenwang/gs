@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: @env@
+  liquibase:
+    change-log: classpath:liquibase/changelog.xml
+mybatis:
+  mapper-locations: classpath*:hw/gs/mapper/*.xml
+  type-aliases-package: hw.gs.entity
+pagehelper:
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countsql
+  auto-dialect: mysql
